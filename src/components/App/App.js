@@ -53,18 +53,16 @@ export default class App extends Component {
   }
 
   toggleProperty(arr, id, propName) {
-    const idx = this.getIndexById(arr, id)
-    const oldItem = arr[idx]
-    const value = !oldItem.[propName]
-    const item = { ...oldItem, [propName]: value }
+    const i = this.getIndexById(arr, id)
+    const item = { ...arr[i], [propName]: !arr[i][propName] }
 
-    return [...arr.slice(0, idx), item, ...arr.slice(idx + 1)]
+    return [...arr.slice(0, i), item, ...arr.slice(i + 1)]
   }
 
   onToggleImportant = (id) => {
     this.setState(({ items }) => {
       return {
-        items: this.toggleProperty(items, id, 'important')
+        items: this.toggleProperty(items, id, 'important'),
       }
     })
   }
@@ -72,17 +70,17 @@ export default class App extends Component {
   onToggleDone = (id) => {
     this.setState(({ items }) => {
       return {
-        items: this.toggleProperty(items, id, 'done')
+        items: this.toggleProperty(items, id, 'done'),
       }
     })
   }
 
   onSearchChange = (search) => {
-    this.setState({search})
+    this.setState({ search })
   }
 
   onFilterChange = (filter) => {
-    this.setState({filter})
+    this.setState({ filter })
   }
 
   searchItems(items, search) {
@@ -95,13 +93,13 @@ export default class App extends Component {
   }
 
   filterItems(items, filter) {
-    switch(filter) {
+    switch (filter) {
       case 'all':
         return items
       case 'active':
-        return items.filter((item)=>!item.done)
+        return items.filter((item) => !item.done)
       case 'done':
-        return items.filter((item)=>item.done)
+        return items.filter((item) => item.done)
       default:
         return items
     }
@@ -110,7 +108,11 @@ export default class App extends Component {
   render() {
     const { items, search, filter } = this.state
 
-    const visibleItems = this.searchItems(this.filterItems(items, filter), search)
+    const visibleItems = this.searchItems(
+      this.filterItems(items, filter),
+      search
+    )
+
     const doneCount = items.filter((el) => el.done).length
     const todoCount = items.length - doneCount
 
@@ -120,7 +122,10 @@ export default class App extends Component {
 
         <div className="top-panel d-flex">
           <SearchPanel onSearchChange={this.onSearchChange} />
-          <ItemStatusFilter filter={filter} onFilterChange={this.onFilterChange} />
+          <ItemStatusFilter
+            filter={filter}
+            onFilterChange={this.onFilterChange}
+          />
         </div>
 
         <TodoList
