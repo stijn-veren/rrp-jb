@@ -3,12 +3,8 @@ import { Component } from 'react'
 import './TodoListItem.css'
 
 export default class TodoListItem extends Component {
-  constructor() {
-    super()
-
-    this.onLabelClick = () => {
-      console.log(`Done: ${this.props.label}`)
-    }
+  onLabelClick = () => {
+    console.log(`Done: ${this.props.label}`)
   }
 
   render() {
