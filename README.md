@@ -7,7 +7,13 @@
 
 ## Resources
 
-...
+Bootstrap:
+* https://getbootstrap.com
+* https://cdnjs.com/libraries/bootstrap
+
+Font Awesome:
+* https://fontawesome.com
+* https://cdnjs.com/libraries/font-awesome
 
 ---
 
