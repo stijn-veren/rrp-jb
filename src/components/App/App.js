@@ -9,7 +9,7 @@ import ItemAddForm from '../ItemAddForm'
 import './App.css'
 
 export default class App extends Component {
-  maxId = 100
+  maxId = 0
 
   state = {
     todoData: [
