@@ -12,13 +12,13 @@ export default class App extends Component {
   maxId = 0
 
   state = {
-    todoData: [
+    items: [
       this.createTodoItem('Drink Coffee'),
       this.createTodoItem('Make Awesome App'),
       this.createTodoItem('Have a lunch'),
     ],
-    term: '',
-    filter: 'all'
+    filter: 'all',
+    search: '',
   }
 
   createTodoItem(label) {
@@ -35,20 +35,19 @@ export default class App extends Component {
   }
 
   deleteItem = (id) => {
-    this.setState(({ todoData }) => {
-      const idx = this.getIndexById(todoData, id)
+    this.setState(({ items }) => {
+      const idx = this.getIndexById(items, id)
       return {
-        todoData: [...todoData.slice(0, idx), ...todoData.slice(idx + 1)],
+        items: [...items.slice(0, idx), ...items.slice(idx + 1)],
       }
     })
   }
 
-  addItem = (text) => {
-    const newItem = this.createTodoItem(text)
-
-    this.setState(({ todoData }) => {
+  onItemAdded = (label) => {
+    this.setState(({ items }) => {
+      const item = this.createTodoItem(label)
       return {
-        todoData: [...todoData, newItem],
+        items: [...items, item],
       }
     })
   }
@@ -56,45 +55,46 @@ export default class App extends Component {
   toggleProperty(arr, id, propName) {
     const idx = this.getIndexById(arr, id)
     const oldItem = arr[idx]
-    const newItem = { ...oldItem, [propName]: !oldItem.[propName] }
+    const value = !oldItem.[propName]
+    const item = { ...oldItem, [propName]: value }
 
-    return [...arr.slice(0, idx), newItem, ...arr.slice(idx + 1)]
+    return [...arr.slice(0, idx), item, ...arr.slice(idx + 1)]
   }
 
   onToggleImportant = (id) => {
-    this.setState(({ todoData }) => {
+    this.setState(({ items }) => {
       return {
-        todoData: this.toggleProperty(todoData, id, 'important')
+        items: this.toggleProperty(items, id, 'important')
       }
     })
   }
 
   onToggleDone = (id) => {
-    this.setState(({ todoData }) => {
+    this.setState(({ items }) => {
       return {
-        todoData: this.toggleProperty(todoData, id, 'done')
+        items: this.toggleProperty(items, id, 'done')
       }
     })
   }
 
-  onSearchChange = (term) => {
-    this.setState({term})
+  onSearchChange = (search) => {
+    this.setState({search})
   }
 
   onFilterChange = (filter) => {
     this.setState({filter})
   }
 
-  search(items, term) {
-    if (term.length === 0) {
+  searchItems(items, search) {
+    if (search.length === 0) {
       return items
     }
     return items.filter((item) => {
-      return item.label.toLowerCase().indexOf(term.toLowerCase()) > -1
+      return item.label.toLowerCase().indexOf(search.toLowerCase()) > -1
     })
   }
 
-  filter(items, filter) {
+  filterItems(items, filter) {
     switch(filter) {
       case 'all':
         return items
@@ -108,11 +108,11 @@ export default class App extends Component {
   }
 
   render() {
-    const { todoData, term, filter } = this.state
+    const { items, search, filter } = this.state
 
-    const visibleItems = this.filter(this.search(todoData, term), filter)
-    const doneCount = todoData.filter((el) => el.done).length
-    const todoCount = todoData.length - doneCount
+    const visibleItems = this.searchItems(this.filterItems(items, filter), search)
+    const doneCount = items.filter((el) => el.done).length
+    const todoCount = items.length - doneCount
 
     return (
       <div className="todo-app">
@@ -124,13 +124,13 @@ export default class App extends Component {
         </div>
 
         <TodoList
-          todos={visibleItems}
+          items={visibleItems}
           onDeleted={this.deleteItem}
           onToggleImportant={this.onToggleImportant}
           onToggleDone={this.onToggleDone}
         />
 
-        <ItemAddForm onItemAdded={this.addItem} />
+        <ItemAddForm onItemAdded={this.onItemAdded} />
       </div>
     )
   }
