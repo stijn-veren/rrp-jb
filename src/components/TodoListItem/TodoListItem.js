@@ -13,7 +13,11 @@ export default class TodoListItem extends Component {
 
     return (
       <span className="todo-list-item">
-        <span className="todo-list-item-label" style={style}>
+        <span
+          className="todo-list-item-label"
+          style={style}
+          onClick={() => console.log(`Done: ${label}`)}
+        >
           {label}
         </span>
 
