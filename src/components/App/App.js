@@ -13,15 +13,15 @@ export default class App extends Component {
 
   state = {
     items: [
-      this.createTodoItem('Drink Coffee'),
-      this.createTodoItem('Make Awesome App'),
-      this.createTodoItem('Have a lunch'),
+      this.createItem('Drink Coffee'),
+      this.createItem('Make Awesome App'),
+      this.createItem('Have a lunch'),
     ],
     filter: 'all',
     search: '',
   }
 
-  createTodoItem(label) {
+  createItem(label) {
     return {
       label,
       important: false,
@@ -43,9 +43,9 @@ export default class App extends Component {
     })
   }
 
-  onItemAdded = (label) => {
+  addItem = (label) => {
     this.setState(({ items }) => {
-      const item = this.createTodoItem(label)
+      const item = this.createItem(label)
       return {
         items: [...items, item],
       }
@@ -59,7 +59,7 @@ export default class App extends Component {
     return [...arr.slice(0, i), item, ...arr.slice(i + 1)]
   }
 
-  onToggleImportant = (id) => {
+  toggleImportant = (id) => {
     this.setState(({ items }) => {
       return {
         items: this.toggleProperty(items, id, 'important'),
@@ -67,7 +67,7 @@ export default class App extends Component {
     })
   }
 
-  onToggleDone = (id) => {
+  toggleDone = (id) => {
     this.setState(({ items }) => {
       return {
         items: this.toggleProperty(items, id, 'done'),
@@ -94,12 +94,11 @@ export default class App extends Component {
 
   filterItems(items, filter) {
     switch (filter) {
-      case 'all':
-        return items
       case 'active':
         return items.filter((item) => !item.done)
       case 'done':
         return items.filter((item) => item.done)
+      case 'all':
       default:
         return items
     }
@@ -120,7 +119,7 @@ export default class App extends Component {
       <div className="todo-app">
         <AppHeader toDo={todoCount} done={doneCount} />
 
-        <div className="top-panel d-flex">
+        <div className="top-panel d-flex my-3">
           <SearchPanel onSearchChange={this.onSearchChange} />
           <ItemStatusFilter
             filter={filter}
@@ -131,11 +130,11 @@ export default class App extends Component {
         <TodoList
           items={visibleItems}
           onDeleted={this.deleteItem}
-          onToggleImportant={this.onToggleImportant}
-          onToggleDone={this.onToggleDone}
+          toggleImportant={this.toggleImportant}
+          toggleDone={this.toggleDone}
         />
 
-        <ItemAddForm onItemAdded={this.onItemAdded} />
+        <ItemAddForm addItem={this.addItem} />
       </div>
     )
   }

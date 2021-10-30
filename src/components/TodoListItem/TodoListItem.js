@@ -3,8 +3,8 @@ import './TodoListItem.css'
 const TodoListItem = ({
   label,
   onDeleted,
-  onToggleImportant,
-  onToggleDone,
+  toggleImportant,
+  toggleDone,
   done,
   important,
 }) => {
@@ -28,7 +28,7 @@ const TodoListItem = ({
       <span
         className="todo-list-item-label"
         style={style}
-        onClick={onToggleDone}
+        onClick={toggleDone}
       >
         {label}
       </span>
@@ -36,7 +36,7 @@ const TodoListItem = ({
       <button
         type="button"
         className="btn btn-outline-success btn-sm float-right"
-        onClick={onToggleImportant}
+        onClick={toggleImportant}
       >
         <i className="fas fa-exclamation" />
       </button>
