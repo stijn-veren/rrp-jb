@@ -9,7 +9,7 @@ const PlanetView = ({ planet }) => {
     <React.Fragment>
       <div className="row">
         <div className="col">
-          <h4 class="text-center">{name}</h4>
+          <h4 className="text-center">{name}</h4>
         </div>
       </div>
       <div className="row">
