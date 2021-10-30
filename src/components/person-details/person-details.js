@@ -1,7 +1,8 @@
 import { Component } from 'react'
-import SwapiService from '../../services/swapi-service'
 
 import './person-details.css'
+import SwapiService from '../../services/swapi-service'
+import ErrorButton from '../error-button/error-button'
 
 export default class PersonDetails extends Component {
   swapiService = new SwapiService()
@@ -32,66 +33,38 @@ export default class PersonDetails extends Component {
   }
 
   render() {
-    if (!this.state.person) {
+    const { person } = this.state
+    if (!person) {
       return <span>Select a person from a list</span>
     }
 
-    const { id, name, gender, birthYear, eyeColor } = this.state.person
+    const { id, name, gender, birthYear, eyeColor } = person
 
     return (
-      <div className="row">
-        <div className="col">
-          <div className="card border-secondary">
-            <div className="card-header">
-              {name} {this.props.personId}
-            </div>
-            <div className="card-body">
-              <div className="row">
-                <div className="col col-sm-4">
-                  <img
-                    alt=""
-                    className="img-fluid"
-                    src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
-                  />
-                </div>
+      <div className="person-details card">
+        <img
+          className="person-image"
+          src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+          alt="character"
+        />
 
-                <div className="col col-sm-8">
-                  <ul className="list-group list-group-flush">
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col col-sm-5 col-md-6">
-                          <span className="term">Gender</span>
-                        </div>
-                        <div className="col col-sm-7 col-md-6">
-                          <span>{gender}</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col col-sm-5 col-md-6">
-                          <span className="term">Birth Year</span>
-                        </div>
-                        <div className="col col-sm-7 col-md-6">
-                          <span>{birthYear}</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col col-sm-5 col-md-6">
-                          <span className="term">Eye Color</span>
-                        </div>
-                        <div className="col col-sm-7 col-md-6">
-                          <span>{eyeColor}</span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="card-body">
+          <h4>{name}</h4>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <span className="term">Gender</span>
+              <span>{gender}</span>
+            </li>
+            <li className="list-group-item">
+              <span className="term">Birth Year</span>
+              <span>{birthYear}</span>
+            </li>
+            <li className="list-group-item">
+              <span className="term">Eye Color</span>
+              <span>{eyeColor}</span>
+            </li>
+          </ul>
+          <ErrorButton />
         </div>
       </div>
     )

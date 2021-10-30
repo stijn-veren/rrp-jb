@@ -1,7 +1,11 @@
-.list-group-item {
-  transition: all 0.3s;
+.item-list {
+  margin-bottom: 1rem;
 }
-.list-group-item:hover {
-  background-color: #343a40;
-  color: #ffffff;
+
+.item-list .list-group-item {
+  cursor: pointer;
+}
+
+.item-list .list-group-item:hover {
+  background-color: #444;
 }
