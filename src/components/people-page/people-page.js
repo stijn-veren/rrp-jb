@@ -1,8 +1,8 @@
 import { Component } from 'react'
 
-import ItemList from '../item-list/item-list'
-import PersonDetails from '../person-details/person-details'
-import ErrorIndicator from '../error-indicator/error-indicator'
+import ItemList from '../item-list'
+import PersonDetails from '../person-details'
+import ErrorIndicator from '../error-indicator'
 
 import './people-page.css'
 
@@ -28,11 +28,11 @@ export default class PeoplePage extends Component {
     }
 
     return (
-      <div className="row mb2">
-        <div className="col-md-6">
+      <div className="row">
+        <div className="col-12 col-md-5 mt-4">
           <ItemList onItemSelected={this.onPersonSelected} />
         </div>
-        <div className="col-md-6">
+        <div className="col-12 col-md-7 my-4">
           <PersonDetails personId={this.state.selectedPerson} />
         </div>
       </div>
