@@ -50,6 +50,12 @@ export default class RandomPlanet extends Component {
       <PlanetView planet={planet} />
     )
 
-    return <div className="row">{content}</div>
+    return (
+      <div className="card border-secondary">
+        <div className="card-body">
+          <div className="row">{content}</div>
+        </div>
+      </div>
+    )
   }
 }

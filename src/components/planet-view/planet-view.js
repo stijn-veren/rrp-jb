@@ -1,9 +1,14 @@
 import React from 'react'
 
 import './planet-view.css'
+import image from './no-image.png'
 
 const PlanetView = ({ planet }) => {
   const { id, name, population, rotationPeriod, diameter } = planet
+
+  const ifNoImage = (e) => {
+    e.target.src = image
+  }
 
   return (
     <React.Fragment>
@@ -22,6 +27,7 @@ const PlanetView = ({ planet }) => {
           <img
             alt=""
             className="img-fluid"
+            onError={ifNoImage}
             src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
           />
         </div>
