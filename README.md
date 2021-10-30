@@ -1,5 +1,7 @@
 # Todo App
 
+![Screenshot of the resulting Todo List App](https://github.com/stijn-veren/rrp-jb-todo-app/blob/main/screenshots/Screenshot-1.png)
+
 ## Learning Project
 
 **React + Redux - Professional Development by Juriy Bura:** https://www.udemy.com/course/pro-react-redux/ \
