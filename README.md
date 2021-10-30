@@ -1,3 +1,24 @@
+# Star DB App
+
+## Learning Project
+
+**React + Redux - Professional Development by Juriy Bura:** https://www.udemy.com/course/pro-react-redux/ \
+**Projects List:** https://github.com/stijn-veren/projects-list
+
+## Resources
+
+The Star Wars API:
+
+- https://swapi.dev
+- https://pipedream.com/apps/swapi
+
+Bootswatch:
+
+- https://bootswatch.com
+- https://cdnjs.com/libraries/font-awesome
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
