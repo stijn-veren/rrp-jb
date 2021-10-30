@@ -17,6 +17,8 @@ Bootswatch:
 - https://bootswatch.com
 - https://cdnjs.com/libraries/bootswatch
 
+loading.io: https://loading.io
+
 ---
 
 # Getting Started with Create React App
