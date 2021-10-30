@@ -5,8 +5,8 @@ import './item-list.css'
 export default class ItemList extends Component {
   render() {
     return (
-      <div class="card border-secondary">
-        <div class="card-body">
+      <div className="card border-secondary">
+        <div className="card-body">
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Luke Skywalker</li>
             <li className="list-group-item">Darth Vader</li>

@@ -7,9 +7,9 @@ export default class PersonDetails extends Component {
     return (
       <div className="row">
         <div className="col">
-          <div class="card border-secondary">
-            <div class="card-header">R2-D2</div>
-            <div class="card-body">
+          <div className="card border-secondary">
+            <div className="card-header">R2-D2</div>
+            <div className="card-body">
               <div className="row">
                 <div className="col col-sm-4">
                   <img
