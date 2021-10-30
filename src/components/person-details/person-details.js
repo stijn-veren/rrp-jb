@@ -5,29 +5,57 @@ import './person-details.css'
 export default class PersonDetails extends Component {
   render() {
     return (
-      <div className="person-details card">
-        <img
-          alt=""
-          className="person-image"
-          src="https://starwars-visualguide.com/assets/img/characters/3.jpg"
-        />
+      <div className="row">
+        <div className="col">
+          <div class="card border-secondary">
+            <div class="card-header">R2-D2</div>
+            <div class="card-body">
+              <div className="row">
+                <div className="col col-sm-4">
+                  <img
+                    alt=""
+                    className="img-fluid"
+                    src="https://starwars-visualguide.com/assets/img/characters/3.jpg"
+                  />
+                </div>
 
-        <div className="card-body">
-          <h4>R2-D2</h4>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">
-              <span className="term">Gender</span>
-              <span>male</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Birth Year</span>
-              <span>43</span>
-            </li>
-            <li className="list-group-item">
-              <span className="term">Eye Color</span>
-              <span>red</span>
-            </li>
-          </ul>
+                <div className="col col-sm-8">
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">
+                      <div className="row">
+                        <div className="col col-sm-5 col-md-6">
+                          <span className="term">Gender</span>
+                        </div>
+                        <div className="col col-sm-7 col-md-6">
+                          <span>male</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="list-group-item">
+                      <div className="row">
+                        <div className="col col-sm-5 col-md-6">
+                          <span className="term">Birth Year</span>
+                        </div>
+                        <div className="col col-sm-7 col-md-6">
+                          <span>43</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="list-group-item">
+                      <div className="row">
+                        <div className="col col-sm-5 col-md-6">
+                          <span className="term">Eye Color</span>
+                        </div>
+                        <div className="col col-sm-7 col-md-6">
+                          <span>red</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

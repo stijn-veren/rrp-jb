@@ -7,15 +7,16 @@ import './app.css'
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <Header />
+      <hr />
       <RandomPlanet />
-
-      <div className="row mb2">
-        <div className="col-md-6">
+      <hr />
+      <div className="row">
+        <div className="col-12 col-md-5 mt-4">
           <ItemList />
         </div>
-        <div className="col-md-6">
+        <div className="col-12 col-md-7 my-4">
           <PersonDetails />
         </div>
       </div>
