@@ -15,7 +15,7 @@ The Star Wars API:
 Bootswatch:
 
 - https://bootswatch.com
-- https://cdnjs.com/libraries/font-awesome
+- https://cdnjs.com/libraries/bootswatch
 
 ---
 
