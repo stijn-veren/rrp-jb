@@ -9,9 +9,11 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      <hr />
-      <RandomPlanet />
-      <hr />
+      <div className="card border-secondary">
+        <div className="card-body">
+          <RandomPlanet />
+        </div>
+      </div>
       <div className="row">
         <div className="col-12 col-md-5 mt-4">
           <ItemList />
