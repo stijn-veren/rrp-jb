@@ -3,24 +3,23 @@ import React, { Component } from 'react'
 import SwapiService from '../../services/swapi-service'
 import ErrorIndicator from '../error-indicator'
 import Spinner from '../spinner'
-import PlanetView from './planet-view'
+import PlanetView from '../planet-view'
 
 import './random-planet.css'
 
 export default class RandomPlanet extends Component {
+  swapiService = new SwapiService()
+
   state = {
     planet: {},
     loading: true,
     error: false,
   }
 
-  constructor() {
-    super()
+  componentDidMount() {
     this.updatePlanet()
-    setInterval(this.updatePlanet, 1500)
+    this.interval = setInterval(this.updatePlanet, 1500)
   }
-
-  swapiService = new SwapiService()
 
   onPlanetLoaded = (planet) => {
     this.setState({ planet, loading: false })
