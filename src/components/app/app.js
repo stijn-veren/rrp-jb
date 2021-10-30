@@ -4,6 +4,7 @@ import Header from '../header'
 import RandomPlanet from '../random-planet'
 import ToggleButton from '../toggle-button'
 import ErrorButton from '../error-button'
+import ErrorIndicator from '../error-indicator'
 import PeoplePage from '../people-page'
 
 import './app.css'
@@ -22,11 +23,17 @@ export default class App extends Component {
     })
   }
 
-  componentDidCatch() {
-    this.setState({ hasError: true })
+  componentDidCatch(error, info) {
+    this.setState({
+      hasError: true,
+    })
   }
 
   render() {
+    if (this.state.hasError) {
+      return <ErrorIndicator />
+    }
+
     return (
       <div className="container">
         <Header />
