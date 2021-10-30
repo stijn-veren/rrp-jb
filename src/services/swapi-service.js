@@ -40,7 +40,7 @@ export default class SwapiService {
     return this._transformStarship(starship)
   }
 
-  _extractId(item) {
+  _extractId = (item) => {
     const idRegExp = /\/([0-9]*)\/$/
     return item.url.match(idRegExp)[1]
   }
@@ -49,9 +49,13 @@ export default class SwapiService {
     return {
       id: this._extractId(planet),
       name: planet.name,
-      population: planet.population,
-      rotationPeriod: planet.rotation_period,
       diameter: planet.diameter,
+      gravity: planet.gravity,
+      orbitalPeriod: planet.orbital_period,
+      population: planet.population,
+      terrain: planet.terrain,
+      climate: planet.climate,
+      rotationPeriod: planet.rotation_period,
     }
   }
 
@@ -61,11 +65,11 @@ export default class SwapiService {
       name: starship.name,
       model: starship.model,
       manufacturer: starship.manufacturer,
-      costInCredits: starship.costInCredits,
+      costInCredits: starship.cost_in_credits,
       length: starship.length,
       crew: starship.crew,
       passengers: starship.passengers,
-      cargoCapacity: starship.cargoCapacity,
+      cargoCapacity: starship.cargo_capacity,
     }
   }
 
