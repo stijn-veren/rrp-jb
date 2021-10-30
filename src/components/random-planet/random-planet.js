@@ -1,16 +1,14 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 
 import SwapiService from '../../services/swapi-service'
+import Spinner from '../spinner'
 
 import './random-planet.css'
 
 export default class RandomPlanet extends Component {
   state = {
-    id: null,
-    name: null,
-    population: null,
-    rotationPeriod: null,
-    diameter: null,
+    planet: {},
+    loading: true,
   }
 
   constructor() {
@@ -20,23 +18,40 @@ export default class RandomPlanet extends Component {
 
   swapiService = new SwapiService()
 
+  onPlanetLoaded = (planet) => {
+    this.setState({ planet, loading: false })
+  }
+
   updatePlanet() {
-    const id = Math.floor(Math.random() * 60)
-    this.swapiService.getPlanet(id).then((planet) => {
-      this.setState({
-        id,
-        name: planet.name,
-        population: planet.population,
-        rotationPeriod: planet.rotation_period,
-        diameter: planet.diameter,
-      })
-    })
+    // const id = Math.floor(Math.random() * 60)
+    const id = 100500
+    this.swapiService.getPlanet(id).then(this.onPlanetLoaded)
   }
 
   render() {
-    const { id, name, population, rotationPeriod, diameter } = this.state
+    const { planet, loading } = this.state
 
-    return (
+    const content = loading ? <Spinner /> : <PlanetView planet={planet} />
+
+    return <div className="row">{content}</div>
+  }
+}
+
+const PlanetView = ({ planet }) => {
+  const { id, name, population, rotationPeriod, diameter } = planet
+
+  return (
+    <React.Fragment>
+      <div className="row">
+        <div className="col">
+          <h4 class="text-center">{name}</h4>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <hr />
+        </div>
+      </div>
       <div className="row">
         <div className="col-4">
           <img
@@ -48,38 +63,33 @@ export default class RandomPlanet extends Component {
         <div className="col-8 ps-3">
           <div className="row">
             <div className="col">
-              <h4>{name}</h4>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   <div className="row">
-                    <div className="col col-md-5">
-                      <span className="term">Population</span>
+                    <div className="col-12 col-sm-auto col-md-5">
+                      <span className="term fw-bold">Population</span>
                     </div>
-                    <div className="col col-md-7">
+                    <div className="col col-sm-auto col-md-7">
                       <span>{population}</span>
                     </div>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <div className="row">
-                    <div className="col col-md-5">
-                      <span className="term">Rotation Period</span>
+                    <div className="col-12 col-sm-auto col-md-5">
+                      <span className="term fw-bold">Rotation Period</span>
                     </div>
-                    <div className="col col-md-7">
+                    <div className="col col-sm-auto col-md-7">
                       <span>{rotationPeriod}</span>
                     </div>
                   </div>
                 </li>
                 <li className="list-group-item">
                   <div className="row">
-                    <div className="col col-md-5">
-                      <span className="term">Diameter</span>
+                    <div className="col-12 col-sm-auto col-md-5">
+                      <span className="term fw-bold">Diameter</span>
                     </div>
-                    <div className="col col-md-7">
+                    <div className="col col-sm-auto col-md-7">
                       <span>{diameter}</span>
                     </div>
                   </div>
@@ -89,6 +99,6 @@ export default class RandomPlanet extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+    </React.Fragment>
+  )
 }
