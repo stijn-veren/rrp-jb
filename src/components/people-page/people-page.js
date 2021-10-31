@@ -2,31 +2,11 @@ import React, { Component } from 'react'
 
 import ItemList from '../item-list'
 import PersonDetails from '../person-details'
-import ErrorIndicator from '../error-indicator'
+import ErrorBoundry from '../error-boundry'
 import Row from '../row'
 
 import './people-page.css'
 import SwapiService from '../../services/swapi-service'
-
-class ErrorBoundry extends Component {
-  state = {
-    hasError: false,
-  }
-
-  componentDidCatch() {
-    this.setState({
-      hasError: true,
-    })
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <ErrorIndicator />
-    }
-
-    return this.props.children
-  }
-}
 
 export default class PeoplePage extends Component {
   swapiService = new SwapiService()
