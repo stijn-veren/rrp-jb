@@ -2,7 +2,7 @@ import { Component } from 'react'
 
 import './person-details.css'
 import SwapiService from '../../services/swapi-service'
-import ErrorButton from '../error-button/error-button'
+import ErrorButton from '../error-button'
 
 export default class PersonDetails extends Component {
   swapiService = new SwapiService()

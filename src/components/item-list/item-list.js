@@ -1,7 +1,7 @@
 import { Component } from 'react'
 
 import './item-list.css'
-import Spinner from '../spinner/spinner'
+import Spinner from '../spinner'
 
 export default class ItemList extends Component {
   state = {

@@ -1,8 +1,8 @@
 import { Component } from 'react'
 
-import ItemList from '../item-list/item-list'
-import PersonDetails from '../person-details/person-details'
-import ErrorIndicator from '../error-indicator/error-indicator'
+import ItemList from '../item-list'
+import PersonDetails from '../person-details'
+import ErrorIndicator from '../error-indicator'
 
 import './people-page.css'
 import SwapiService from '../../services/swapi-service'

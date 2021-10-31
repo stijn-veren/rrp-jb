@@ -7,8 +7,8 @@ import ErrorIndicator from '../error-indicator'
 import PeoplePage from '../people-page'
 
 import './app.css'
-import ItemList from '../item-list/item-list'
-import PersonDetails from '../person-details/person-details'
+import ItemList from '../item-list'
+import PersonDetails from '../person-details'
 import SwapiService from '../../services/swapi-service'
 
 export default class App extends Component {
