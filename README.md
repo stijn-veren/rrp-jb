@@ -19,6 +19,8 @@ Bootswatch:
 
 loading.io: https://loading.io
 
+prop-types: https://www.npmjs.com/package/prop-types
+
 ---
 
 # Getting Started with Create React App
