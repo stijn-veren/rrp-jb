@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
 
 const MyContext = React.createContext()
@@ -12,13 +12,9 @@ const App = () => {
 }
 
 const Child = () => {
-  return (
-    <MyContext.Consumer>
-      {(value) => {
-        return <p>{value}</p>
-      }}
-    </MyContext.Consumer>
-  )
+  const value = useContext(MyContext)
+
+  return <p>{value}</p>
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
