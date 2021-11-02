@@ -13,14 +13,13 @@ import './app.css'
 
 export default class App extends Component {
   state = {
-    swapiService: new DummySwapiService(),
+    swapiService: new SwapiService(),
   }
 
   onServiceChange = () => {
     this.setState(({ swapiService }) => {
       const Service =
         swapiService instanceof SwapiService ? DummySwapiService : SwapiService
-
       return {
         swapiService: new Service(),
       }
