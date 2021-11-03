@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import { ClassCounter, HookCounter } from './use-effect'
@@ -23,11 +23,12 @@ const App = () => {
 }
 
 const Notification = () => {
-  return (
-    <div>
-      <p>Hello</p>
-    </div>
-  )
+  const [visible, setVisible] = useState(true)
+  useEffect(() => {
+    const timeout = setTimeout(() => setVisible(false), 2500)
+    return () => clearTimeout(timeout)
+  }, [])
+  return <div>{visible && <p>Hello</p>}</div>
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
