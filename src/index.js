@@ -14,11 +14,20 @@ const App = () => {
         <button onClick={() => setVisible(false)}>hide</button>
         <ClassCounter value={value} />
         <HookCounter value={value} />
+        <Notification />
       </div>
     )
   } else {
     return <button onClick={() => setVisible(true)}>show</button>
   }
+}
+
+const Notification = () => {
+  return (
+    <div>
+      <p>Hello</p>
+    </div>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
