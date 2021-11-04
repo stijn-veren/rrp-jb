@@ -19,6 +19,10 @@ Bootswatch:
 
 loading.io: https://loading.io
 
+prop-types: https://www.npmjs.com/package/prop-types
+
+React Router DOM: https://www.npmjs.com/package/react-router-dom
+
 ---
 
 # Getting Started with Create React App
