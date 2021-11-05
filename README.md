@@ -11,6 +11,10 @@ Redux:
 - https://www.npmjs.com/package/redux
 - https://redux.js.org
 
+Bootstrap:
+- https://cdnjs.com/libraries/bootstrap
+- https://getbootstrap.com
+
 ---
 
 # Getting Started with Create React App
