@@ -16,9 +16,9 @@ const reducer = (state, action) => {
 
 const store = createStore(reducer)
 
-console.log(store.getState())
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
 store.dispatch({ type: 'INC' })
 store.dispatch({ type: 'INC' })
-
-console.log(store.getState())
