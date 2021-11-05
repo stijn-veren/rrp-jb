@@ -14,6 +14,6 @@ const reducer = (state, action) => {
 
 let state = reducer(undefined, {})
 
-let state = reducer(state, { type: 'INC' })
+state = reducer(state, { type: 'INC' })
 
 console.log(state)
