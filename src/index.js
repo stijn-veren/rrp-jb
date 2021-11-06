@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore, bindActionCreators } from 'redux'
 
 import reducer from './reducer'
 import { inc, dec, rnd } from './actions'
@@ -6,15 +6,9 @@ import { inc, dec, rnd } from './actions'
 const store = createStore(reducer)
 const { dispatch } = store
 
-const bindActionCreator =
-  (creator, dispatch) =>
-  (...args) => {
-    dispatch(creator(...args))
-  }
-
-const incDispatch = bindActionCreator(inc, dispatch)
-const decDispatch = bindActionCreator(dec, dispatch)
-const rndDispatch = bindActionCreator(rnd, dispatch)
+const incDispatch = bindActionCreators(inc, dispatch)
+const decDispatch = bindActionCreators(dec, dispatch)
+const rndDispatch = bindActionCreators(rnd, dispatch)
 
 document.getElementById('inc').addEventListener('click', incDispatch)
 document.getElementById('dec').addEventListener('click', decDispatch)
