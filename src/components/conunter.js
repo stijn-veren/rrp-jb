@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import * as actions from '../actions'
+import Button from './button'
 
 const Counter = ({ counter, dec, inc, rnd }) => {
   return (
@@ -19,39 +20,9 @@ const Counter = ({ counter, dec, inc, rnd }) => {
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-1">
-                <div className="d-grid gap-2">
-                  <button
-                    onClick={dec}
-                    className="btn btn-primary btn-lg"
-                    type="button"
-                  >
-                    DEC
-                  </button>
-                </div>
-              </div>
-              <div className="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-1">
-                <div className="d-grid gap-2">
-                  <button
-                    onClick={inc}
-                    className="btn btn-primary btn-lg"
-                    type="button"
-                  >
-                    INC
-                  </button>
-                </div>
-              </div>
-              <div className="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-1">
-                <div className="d-grid gap-2">
-                  <button
-                    onClick={rnd}
-                    className="btn btn-primary btn-lg"
-                    type="button"
-                  >
-                    RND
-                  </button>
-                </div>
-              </div>
+              <Button action={dec} name="DEC" />
+              <Button action={inc} name="INC" />
+              <Button action={rnd} name="RND" />
             </div>
           </div>
         </div>
