@@ -11,6 +11,10 @@ Redux:
 - https://www.npmjs.com/package/redux
 - https://redux.js.org
 
+React Redux:
+- https://www.npmjs.com/package/react-redux
+- https://github.com/reduxjs/react-redux
+
 Bootstrap:
 - https://cdnjs.com/libraries/bootstrap
 - https://getbootstrap.com
