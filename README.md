@@ -7,7 +7,17 @@
 
 ## Resources
 
-...
+Redux:
+- https://www.npmjs.com/package/redux
+- https://redux.js.org
+
+React Redux:
+- https://www.npmjs.com/package/react-redux
+- https://github.com/reduxjs/react-redux
+
+prop-types: https://www.npmjs.com/package/prop-types
+
+React Router DOM: https://www.npmjs.com/package/react-router-dom
 
 ---
 
