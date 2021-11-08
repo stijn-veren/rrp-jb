@@ -10,7 +10,7 @@ class BookList extends Component {
       <ul>
         {books.map((book) => {
           return (
-            <li>
+            <li key={book.id}>
               <BookListItem book={book} />
             </li>
           )
