@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -24,7 +23,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-
-// Functions required by a production application
-// routing, context and passing services using context
-// high order components and component working with redux
