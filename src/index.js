@@ -24,3 +24,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
+
+// Functions required by a production application
+// routing, context and passing services using context
+// high order components and component working with redux
