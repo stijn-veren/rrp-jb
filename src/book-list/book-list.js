@@ -12,7 +12,6 @@ class BookList extends Component {
     // 1. receive data
     const { bookstoreService } = this.props
     const data = bookstoreService.getBooks()
-    console.log(data)
 
     // 2. dispatch action to store
     this.props.booksLoaded(data)
@@ -34,11 +33,6 @@ class BookList extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     books: state.books,
-//   }
-// }
 const mapStateToProps = ({ books }) => {
   return { books }
 }
