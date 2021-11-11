@@ -6,19 +6,21 @@ By Juriy Bura
 
 ## Projects:
 
-**Todo App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/todo-app
+**Todo App:** https://github.com/stijn-veren/rrp-jb/tree/main/todo-app
 
-**Hooks App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/hooks
+**Hooks App:** https://github.com/stijn-veren/rrp-jb/tree/main/hooks
 
-**Star DB App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/star-db
+**Star DB App:** https://github.com/stijn-veren/rrp-jb/tree/main/star-db
 
-**Redux Sandbox:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/redux-sandbox
+**Redux Sandbox:** https://github.com/stijn-veren/rrp-jb/tree/main/redux-sandbox
 
-**Re Store App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/re-store
+**Re Store App:** https://github.com/stijn-veren/rrp-jb/tree/main/re-store
 
 ##
 
 **Courses List:** https://github.com/stijn-veren/projects-list
+
+##
 
 ## Resources
 
