@@ -6,15 +6,15 @@ By Juriy Bura
 
 ## Projects:
 
-**Todo App:**
+**Todo App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/todo-app
 
-**Hooks App:**
+**Hooks App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/hooks
 
-**Star DB App:**
+**Star DB App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/star-db
 
-**Redux Sandbox:**
+**Redux Sandbox:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/redux-sandbox
 
-**Re Store App:**
+**Re Store App:** https://github.com/stijn-veren/rrp-jb-todo-app/tree/main/re-store
 
 ##
 
@@ -25,12 +25,14 @@ By Juriy Bura
 ### Todo App:
 
 Bootstrap:
-* https://getbootstrap.com
-* https://cdnjs.com/libraries/bootstrap
+
+- https://getbootstrap.com
+- https://cdnjs.com/libraries/bootstrap
 
 Font Awesome:
-* https://fontawesome.com
-* https://cdnjs.com/libraries/font-awesome
+
+- https://fontawesome.com
+- https://cdnjs.com/libraries/font-awesome
 
 ### Hooks App:
 
