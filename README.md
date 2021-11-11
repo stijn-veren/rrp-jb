@@ -15,9 +15,15 @@ React Redux:
 - https://www.npmjs.com/package/react-redux
 - https://github.com/reduxjs/react-redux
 
-prop-types: https://www.npmjs.com/package/prop-types
+prop-types: 
+- https://www.npmjs.com/package/prop-types
 
-React Router DOM: https://www.npmjs.com/package/react-router-dom
+React Router DOM: 
+- https://www.npmjs.com/package/react-router-dom
+
+Redux Thunk:
+- https://www.npmjs.com/package/redux-thunk
+- https://github.com/reduxjs/redux-thunk
 
 ---
 
