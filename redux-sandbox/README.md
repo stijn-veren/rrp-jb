@@ -1,26 +1,3 @@
-# Redux Sandbox
-
-## Learning Project
-
-**React + Redux - Professional Development by Juriy Bura:** https://www.udemy.com/course/pro-react-redux/ \
-**Projects List:** https://github.com/stijn-veren/projects-list
-
-## Resources
-
-Redux:
-- https://www.npmjs.com/package/redux
-- https://redux.js.org
-
-React Redux:
-- https://www.npmjs.com/package/react-redux
-- https://github.com/reduxjs/react-redux
-
-Bootstrap:
-- https://cdnjs.com/libraries/bootstrap
-- https://getbootstrap.com
-
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
