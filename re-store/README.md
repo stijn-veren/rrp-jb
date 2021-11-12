@@ -1,32 +1,3 @@
-# Re Store App
-
-## Learning Project
-
-**React + Redux - Professional Development by Juriy Bura:** https://www.udemy.com/course/pro-react-redux/ \
-**Projects List:** https://github.com/stijn-veren/projects-list
-
-## Resources
-
-Redux:
-- https://www.npmjs.com/package/redux
-- https://redux.js.org
-
-React Redux:
-- https://www.npmjs.com/package/react-redux
-- https://github.com/reduxjs/react-redux
-
-prop-types: 
-- https://www.npmjs.com/package/prop-types
-
-React Router DOM: 
-- https://www.npmjs.com/package/react-router-dom
-
-Redux Thunk:
-- https://www.npmjs.com/package/redux-thunk
-- https://github.com/reduxjs/redux-thunk
-
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
