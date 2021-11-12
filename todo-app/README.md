@@ -1,24 +1,3 @@
-# Todo App
-
-![Screenshot of the resulting Todo List App](https://github.com/stijn-veren/rrp-jb-todo-app/blob/main/screenshots/Screenshot-1.png)
-
-## Learning Project
-
-**React + Redux - Professional Development by Juriy Bura:** https://www.udemy.com/course/pro-react-redux/ \
-**Projects List:** https://github.com/stijn-veren/projects-list
-
-## Resources
-
-Bootstrap:
-* https://getbootstrap.com
-* https://cdnjs.com/libraries/bootstrap
-
-Font Awesome:
-* https://fontawesome.com
-* https://cdnjs.com/libraries/font-awesome
-
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
