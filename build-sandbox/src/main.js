@@ -7,3 +7,5 @@ class App {
 
 const app = new App()
 app.run()
+
+// npx babel src --out-dir build --plugins @babel/plugin-transform-template-literals,@babel/plugin-transform-block-scoping,@babel/plugin-transform-classes
