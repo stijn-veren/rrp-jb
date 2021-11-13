@@ -21,6 +21,8 @@
 
 **Re Store App:** https://github.com/stijn-veren/rrp-jb/tree/main/re-store
 
+**Build Sandbox:** https://github.com/stijn-veren/rrp-jb/tree/main/build-sandbox
+
 > **Projects List:** https://github.com/stijn-veren/projects-list
 
 ## Resources:
@@ -106,3 +108,7 @@ Redux Thunk:
 
 - https://www.npmjs.com/package/redux-thunk
 - https://github.com/reduxjs/redux-thunk
+
+### Build Sandbox
+
+...
