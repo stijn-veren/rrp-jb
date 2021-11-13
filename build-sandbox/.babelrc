@@ -5,7 +5,8 @@
       {
         "targets": {
           "edge": "18",
-          "chrome": "74"
+          "chrome": "54",
+          "ie": 11
         }
       }
     ]
