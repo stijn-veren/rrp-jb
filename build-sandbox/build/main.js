@@ -1,3 +1,5 @@
+"use strict";
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -22,3 +24,5 @@ var App = /*#__PURE__*/function () {
 
 var app = new App();
 app.run(); // npx babel src --out-dir build --plugins @babel/plugin-transform-template-literals,@babel/plugin-transform-block-scoping,@babel/plugin-transform-classes
+// after adding .babelrc we can use:
+// npx babel src --out-dir build
